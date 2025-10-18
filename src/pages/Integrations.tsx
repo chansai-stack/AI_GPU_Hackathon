@@ -5,6 +5,7 @@
 
 import DiscordIntegration from '@/components/integrations/DiscordIntegration';
 import ZapierIntegration from '@/components/integrations/ZapierIntegration';
+import SheetsExport from '@/components/integrations/SheetsExport';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -49,6 +50,8 @@ const Integrations = () => {
           <DiscordIntegration />
           {/* Zapier */}
 <ZapierIntegration />
+          {/* Google Sheets Export */}
+<SheetsExport />
 
           {/* Placeholder for other integrations */}
           <Card className="p-6">
@@ -240,6 +243,81 @@ Change: -12%
 
 Recommendation:
 Strong buy signal
+
+## ✅ GOOGLE SHEETS EXPORT COMPLETE!
+
+**Files created/updated:**
+```
+✅ docs/07-sheets-export.md
+✅ src/lib/integrations/sheets.ts
+✅ src/components/integrations/SheetsExport.tsx
+✅ package.json (added xlsx dependency)
+✅ src/pages/Integrations.tsx (updated)
+```
+
+---
+
+## 🧪 TESTING CHECKLIST:
+```
+Installation:
+□ Run: npm install xlsx
+□ Verify no errors
+
+Export Testing:
+□ Go to Integrations page
+□ Click "Download Pricing Data"
+□ File downloads: gpuwise-pricing-2025-10-08.xlsx
+□ Open in Excel/Google Sheets
+□ See 3 sheets: Current Pricing, Price History, Best Deals
+□ Data looks formatted correctly
+
+□ Click "Download Market Summary"
+□ File downloads: gpuwise-market-2025-10-08.xlsx
+□ Open file
+□ See 2 sheets: Market Overview, GPU Comparison
+□ Data is current
+
+□ Click "Download Scenario Analysis"
+□ File downloads: gpuwise-scenario-2025-10-08.xlsx
+□ Open file
+□ See 2 sheets: Scenario Results, Recommendations
+□ Data includes scenarios
+
+Multiple Exports:
+□ Download all 3 export types
+□ Each creates separate file
+□ All files open correctly
+□ No browser errors
+```
+
+---
+
+## 📊 WHAT YOU'LL SEE IN EXCEL:
+
+### **Pricing Data File:**
+
+**Sheet 1: Current Pricing**
+```
+| GPU Model | Provider   | Price ($/hr) | Monthly Cost | Region     | Availability |
+|-----------|------------|--------------|--------------|------------|--------------|
+| H100      | Vast.ai    | 4.20         | 3024         | US-West    | High         |
+| H100      | AWS        | 4.85         | 3492         | US-East    | Medium       |
+| A100      | GCP        | 2.85         | 2052         | US-Central | High         |
+```
+
+**Sheet 2: Price History**
+```
+| Date       | GPU Model | Price | Change |
+|------------|-----------|-------|--------|
+| 2025-10-08 | H100      | 4.20  | +8.5%  |
+| 2025-10-07 | H100      | 3.87  | -2.1%  |
+```
+
+**Sheet 3: Best Deals**
+```
+| GPU Model | Best Price ($/hr) | Provider    | Savings vs Avg |
+|-----------|-------------------|-------------|----------------|
+| H100      | 3.95              | Lambda Labs | 12%            |
 
 Timestamp: 2025-10-08T10:30:00Z
 
