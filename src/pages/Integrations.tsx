@@ -4,6 +4,7 @@
  */
 
 import DiscordIntegration from '@/components/integrations/DiscordIntegration';
+import ZapierIntegration from '@/components/integrations/ZapierIntegration';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -46,6 +47,8 @@ const Integrations = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Discord */}
           <DiscordIntegration />
+          {/* Zapier */}
+<ZapierIntegration />
 
           {/* Placeholder for other integrations */}
           <Card className="p-6">
