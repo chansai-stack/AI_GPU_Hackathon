@@ -26,22 +26,22 @@ const Integrations = () => {
         </div>
 
         {/* Status Banner */}
-        <Card className="p-4 mb-6 bg-gradient-to-r from-green-50 to-teal-50 border-green-200">
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-semibold text-green-900">
-                ✅ Live Integrations - Fully Functional
-              </h3>
-              <p className="text-sm text-green-700">
-                These integrations are working right now. Test them during your demo!
-              </p>
-            </div>
-            <div className="text-right">
-              <div className="text-2xl font-bold text-green-600">5</div>
-              <div className="text-xs text-green-700">Active</div>
-            </div>
-          </div>
-        </Card>
+  <Card className="p-4 mb-6 bg-gradient-to-r from-green-50 to-teal-50 border-green-200">
+  <div className="flex items-center justify-between">
+    <div>
+      <h3 className="font-semibold text-green-900">
+        ✅ Live Integrations - Fully Functional
+      </h3>
+      <p className="text-sm text-green-700">
+        Discord • Slack • Zapier (5,000+ apps) • Google Sheets • Email (via Zapier)
+      </p>
+    </div>
+    <div className="text-right">
+      <div className="text-2xl font-bold text-green-600">5</div>
+      <div className="text-xs text-green-700">Working</div>
+    </div>
+  </div>
+</Card>
 
         {/* Integrations Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -148,3 +148,100 @@ Available: 18 units
 [Green sidebar]
 GPUWISE • AI-Generated Market Alert
 [Timestamp]
+
+---
+
+## ✅ ZAPIER INTEGRATION COMPLETE!
+
+**Files created/updated:**
+```
+✅ docs/06-zapier-integration.md
+✅ src/lib/integrations/zapier.ts
+✅ src/components/integrations/ZapierIntegration.tsx
+✅ src/pages/Integrations.tsx (updated)
+```
+
+---
+
+## 🧪 COMPLETE TESTING GUIDE:
+
+### **Zapier Setup (5 minutes):**
+
+1. **Go to zapier.com**
+2. **Sign up** (free account)
+3. **Click "Create Zap"**
+4. **Search "Webhooks by Zapier"**
+5. **Select "Catch Hook"**
+6. **Click "Continue"**
+7. **Copy webhook URL** (looks like `https://hooks.zapier.com/hooks/catch/123456/abcdef/`)
+
+### **GPUWISE Testing:**
+```
+□ Paste webhook URL in Zapier section
+□ URL validates (green checkmark)
+□ Click "Save" - success toast
+□ Click "Send Price Alert Event"
+□ Success toast appears
+□ Go to Zapier → Click "Find new records"
+□ See event data appear with all fields!
+□ Click "Send Market Summary Event"
+□ Check Zapier - new event appears
+□ Click "Send Scenario Completed Event"
+□ Check Zapier - new event appears
+```
+
+### **Complete Workflow Test (Gmail):**
+```
+□ In Zapier, add Gmail action
+□ Choose "Send Email"
+□ Connect Gmail account
+□ Fill in email template:
+  - To: your email
+  - Subject: "GPU Alert from GPUWISE"
+  - Body: Use webhook fields (gpu_model, price, change)
+□ Test action in Zapier
+□ Receive test email ✅
+□ Turn Zap ON
+□ Send another event from GPUWISE
+□ Receive real email with actual data ✅
+```
+
+---
+
+## 🎯 WHAT YOU'LL SEE IN ZAPIER:
+
+**In Zap History:**
+```
+Request received at 10:30 AM
+
+Data:
+✓ event_type: "price_alert"
+✓ gpu_model: "H100"
+✓ provider: "Vast.ai"
+✓ price: "$2.45/hr"
+✓ change: "-12%"
+✓ recommendation: "Strong buy signal"
+✓ timestamp: "2025-10-08T10:30:00Z"
+✓ platform: "GPUWISE"
+```
+
+---
+
+## 📧 EXAMPLE EMAIL YOU'LL RECEIVE:
+```
+From: Zapier (via Gmail)
+Subject: GPU Alert from GPUWISE
+
+GPU Alert: H100
+
+Provider: Vast.ai
+Price: $2.45/hr
+Change: -12%
+
+Recommendation:
+Strong buy signal
+
+Timestamp: 2025-10-08T10:30:00Z
+
+---
+Sent via Zapier automation
